@@ -22,18 +22,20 @@ export default function Home() {
             <button className="dropbtn">Games</button>
             <div className="dropdown-content">
               <Link href="/akalabeth">Akalabeth: World of Doom</Link>
+              <Link href="/ultima4">Ultima IV: Quest of the Avatar</Link>
+              <Link href="/ultima7part2">
+                Ultima VII Part Two: Serpent Isle
+              </Link>
               <Link href="/ultima1">Ultima I: The First Age of Darkness</Link>
+              <Link href="/ultima5">Ultima V: Warriors of Destiny</Link>
+              <Link href="/ultima8">Ultima VIII: Pagan</Link>
               <Link href="/ultima2">
                 Ultima II: The Revenge of the Enchantress
               </Link>
-              <Link href="/ultima3">Ultima III: Exodus</Link>
-              <Link href="/ultima4">Ultima IV: Quest of the Avatar</Link>
-              <Link href="/ultima5">Ultima V: Warriors of Destiny</Link>
               <Link href="/ultima6">Ultima VI: The False Prophet</Link>
-              <Link href="/ultima7">Ultima VII: The Black Gate</Link>
-              <Link href="/ultima7">Ultima VII Part Two: Serpent Isle</Link>
-              <Link href="/ultima8">Ultima VIII: Pagan</Link>
               <Link href="/ultima9">Ultima IX: Ascension</Link>
+              <Link href="/ultima3">Ultima III: Exodus</Link>
+              <Link href="/ultima7">Ultima VII: The Black Gate</Link>
             </div>
           </div>
 
