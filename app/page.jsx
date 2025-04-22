@@ -1,103 +1,178 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+      <header className="header">
+        <div className="logo">
+          <img
+            src="/Ultima_Logo.png" // Replace with your actual image path
+            alt="Ultima Series Logo"
+            className="h-12 md:h-16"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <nav className="nav">
+          <Link href="#overview">Series Overview</Link>
+
+          {/* Dropdown for Ultima Games */}
+          <div className="dropdown">
+            <button className="dropbtn">Games</button>
+            <div className="dropdown-content">
+              <Link href="/akalabeth">Akalabeth: World of Doom</Link>
+              <Link href="/ultima1">Ultima I: The First Age of Darkness</Link>
+              <Link href="/ultima2">
+                Ultima II: The Revenge of the Enchantress
+              </Link>
+              <Link href="/ultima3">Ultima III: Exodus</Link>
+              <Link href="/ultima4">Ultima IV: Quest of the Avatar</Link>
+              <Link href="/ultima5">Ultima V: Warriors of Destiny</Link>
+              <Link href="/ultima6">Ultima VI: The False Prophet</Link>
+              <Link href="/ultima7">Ultima VII: The Black Gate</Link>
+              <Link href="/ultima7">Ultima VII Part Two: Serpent Isle</Link>
+              <Link href="/ultima8">Ultima VIII: Pagan</Link>
+              <Link href="/ultima9">Ultima IX: Ascension</Link>
+            </div>
+          </div>
+
+          <Link href="#characters">Key Characters</Link>
+          <Link href="#virtues">Virtues & Lore</Link>
+          <Link href="#legacy">Legacy</Link>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="overlay">
+          <h1>Welcome to the Ultima Series</h1>
+          <p>"Create worlds, not just games." – Lord British</p>
+        </div>
+      </section>
+
+      {/* Series Overview */}
+      <section id="overview" className="section grid grid-cols-12 gap-6">
+        <div className="col-span-12 sm:col-span-6 lg:col-span-8">
+          <h2>The Legacy of Ultima</h2>
+          <p>
+            Few game series have shaped the role-playing genre quite like
+            Ultima. Conceived by Richard Garriott (aka Lord British), Ultima
+            didn’t just create worlds—it created philosophies, systems, and
+            stories that redefined what games could be. Spanning from primitive
+            dungeon crawlers to deeply moral, living worlds, Ultima evolved over
+            two decades into something far greater than a simple fantasy
+            franchise.
+          </p>
+          <p>
+            At its heart, the Ultima series is about the journey of the Avatar—a
+            character shaped by the player's decisions—through the world of
+            Britannia. But it’s also about the evolution of technology,
+            narrative ambition, and the relationship between creator and player.
+          </p>
+          <p>
+            From its roots in <em>Akalabeth: World of Doom</em> in 1979, to the
+            complex social systems of <em>Ultima Online</em> in 1997, the series
+            has influenced every major RPG to follow.
+          </p>
+        </div>
+        <div className="col-span-12 sm:col-span-6 lg:col-span-4">
+          <img
+            src="/ultima_games.png"
+            alt="Ultima Series Compilation"
+            className="rounded"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+      </section>
+
+      {/* Virtues and Lore Section */}
+      <section id="virtues" className="section alt grid grid-cols-12 gap-6">
+        <div className="col-span-12 sm:col-span-6 lg:col-span-8">
+          <h2>Virtues & Lore</h2>
+          <p>
+            One of Ultima’s most enduring contributions to gaming was its
+            introduction of a moral code. Starting with{" "}
+            <em>Ultima IV: Quest of the Avatar</em>, the series moved away from
+            slaying evil wizards to exploring how one lives virtuously in a
+            complex world.
+          </p>
+          <p>
+            Players are judged not by stats alone, but by how they embody values
+            like Compassion, Honesty, and Honor. This innovative system
+            influenced moral choice systems in RPGs for decades to come.
+          </p>
+        </div>
+        <div className="col-span-12 sm:col-span-6 lg:col-span-4">
+          <img
+            src="/virtues.png"
+            alt="Eight Virtues of Britannia"
+            className="rounded"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+      </section>
+
+      {/* Characters Section */}
+      <section id="characters" className="section grid grid-cols-12 gap-6">
+        <div className="col-span-12 sm:col-span-6 lg:col-span-8">
+          <h2>Key Characters</h2>
+          <p>
+            The series is rich with recurring figures who evolve along with the
+            world itself. Lord British, a stand-in for Garriott, rules Britannia
+            with a wise yet sometimes passive hand. Dupre, Iolo, and Shamino
+            become trusted companions across multiple titles, each with deep
+            backstories.
+          </p>
+          <p>
+            The player, the Avatar, is more than a hero—they are a mirror of the
+            player’s ethics, a vessel for self-discovery in a world that often
+            reflects real dilemmas.
+          </p>
+        </div>
+        <div className="col-span-12 sm:col-span-6 lg:col-span-4">
+          <img
+            src="/avatar.png"
+            alt="The Avatar and companions"
+            className="rounded"
           />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* Legacy & Impact Section */}
+      <section id="legacy" className="section alt grid grid-cols-12 gap-6">
+        <div className="col-span-12 sm:col-span-6 lg:col-span-8">
+          <h2>Enduring Influence</h2>
+          <p>
+            Ultima set standards in worldbuilding, interactivity, and
+            storytelling.
+            <em>Ultima Online</em>, the first MMORPG to achieve mainstream
+            success, laid the foundation for games like{" "}
+            <em>World of Warcraft</em> and
+            <em>Final Fantasy XIV</em>.
+          </p>
+          <p>
+            The influence can be felt in games like <em>The Elder Scrolls</em>,
+            <em>Mass Effect</em>, and <em>Dragon Age</em>—titles where choices
+            matter, and morality is more than a meter on the screen.
+          </p>
+          <p>
+            More than a series of games, Ultima became a **philosophy** for how
+            games could treat their players: as co-authors in a living, evolving
+            world.
+          </p>
+        </div>
+        <div className="col-span-12 sm:col-span-6 lg:col-span-4">
+          <img
+            src="/ultima_online.png"
+            alt="Ultima Online Screenshot"
+            className="rounded"
+          />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>Site by Marijn Meeuwesen - For Educational Use</p>
       </footer>
-    </div>
+    </main>
   );
 }
