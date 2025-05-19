@@ -5,56 +5,16 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <header className="header">
-        <div className="logo">
-          <img
-            src="/Ultima_Logo.png" // Replace with your actual image path
-            alt="Ultima Series Logo"
-            className="h-12 md:h-16"
-          />
-        </div>
-
-        <nav className="nav">
-          <Link href="#overview">Series Overview</Link>
-
-          {/* Dropdown for Ultima Games */}
-          <div className="dropdown">
-            <button className="dropbtn">Games</button>
-            <div className="dropdown-content">
-              <Link href="/akalabeth">Akalabeth: World of Doom</Link>
-              <Link href="/ultima4">Ultima IV: Quest of the Avatar</Link>
-              <Link href="/ultima7part2">
-                Ultima VII Part Two: Serpent Isle
-              </Link>
-              <Link href="/ultima1">Ultima I: The First Age of Darkness</Link>
-              <Link href="/ultima5">Ultima V: Warriors of Destiny</Link>
-              <Link href="/ultima8">Ultima VIII: Pagan</Link>
-              <Link href="/ultima2">
-                Ultima II: The Revenge of the Enchantress
-              </Link>
-              <Link href="/ultima6">Ultima VI: The False Prophet</Link>
-              <Link href="/ultima9">Ultima IX: Ascension</Link>
-              <Link href="/ultima3">Ultima III: Exodus</Link>
-              <Link href="/ultima7">Ultima VII: The Black Gate</Link>
-            </div>
-          </div>
-
-          <Link href="#characters">Key Characters</Link>
-          <Link href="#virtues">Virtues & Lore</Link>
-          <Link href="#legacy">Legacy</Link>
-        </nav>
-      </header>
-
       {/* Hero Section */}
       <section className="hero">
         <div className="overlay">
-          <h1>Welcome to the Ultima Series</h1>
+          <h1>Welcome to the world of Ultima</h1>
           <p>"Create worlds, not just games." – Lord British</p>
         </div>
       </section>
 
       {/* Series Overview */}
-      <section id="overview" className="section grid grid-cols-12 gap-6">
+      <section id="overview" className="section grid grid-cols-12 gap-6 mt-16">
         <div className="col-span-12 sm:col-span-6 lg:col-span-8">
           <h2>The Legacy of Ultima</h2>
           <p>
@@ -88,7 +48,10 @@ export default function Home() {
       </section>
 
       {/* Virtues and Lore Section */}
-      <section id="virtues" className="section alt grid grid-cols-12 gap-6">
+      <section
+        id="virtues"
+        className="section alt grid grid-cols-12 gap-6 mt-16"
+      >
         <div className="col-span-12 sm:col-span-6 lg:col-span-8">
           <h2>Virtues & Lore</h2>
           <p>
@@ -114,7 +77,10 @@ export default function Home() {
       </section>
 
       {/* Characters Section */}
-      <section id="characters" className="section grid grid-cols-12 gap-6">
+      <section
+        id="characters"
+        className="section grid grid-cols-12 gap-6 mt-16"
+      >
         <div className="col-span-12 sm:col-span-6 lg:col-span-8">
           <h2>Key Characters</h2>
           <p>
@@ -140,7 +106,10 @@ export default function Home() {
       </section>
 
       {/* Legacy & Impact Section */}
-      <section id="legacy" className="section alt grid grid-cols-12 gap-6">
+      <section
+        id="legacy"
+        className="section alt grid grid-cols-12 gap-6 mt-16"
+      >
         <div className="col-span-12 sm:col-span-6 lg:col-span-8">
           <h2>Enduring Influence</h2>
           <p>
