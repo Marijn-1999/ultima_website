@@ -1,9 +1,13 @@
 "use client";
 
-// import Header from "./components/Header";
+import { useEffect } from "react";
 import Link from "next/link";
 
-export default function Akalabeth() {
+export default function Page() {
+  useEffect(() => {
+    document.body.classList.add("akalabeth-page");
+    return () => document.body.classList.remove("page-home");
+  }, []);
   return (
     <main>
       {/* <Header /> */}
@@ -22,10 +26,12 @@ export default function Akalabeth() {
           <h2>The Genesis of Ultima</h2>
           <p>
             Before there was Ultima, there was <strong>Akalabeth</strong>.
-            Released in 1979 and subtitled <em>“World of Doom,”</em> this humble
-            dungeon crawler was created by a teenage Richard Garriott as a
-            personal experiment—one that unknowingly became the spark for an
-            entire genre.
+            Released in 1979 and subtitled <em>“World of Doom,”</em>, this
+            humble dungeon crawler was created by a teenage Richard Garriott as
+            a personal experiment—one that unknowingly became the spark for an
+            entire genre. Initially developed for the Apple II, it was later
+            ported unofficially to DOS and has since been made available on
+            modern platforms through collections like GOG and fan emulation.
           </p>
           <p>
             Originally coded in BASIC and sold in ziplock bags at a local
@@ -60,7 +66,7 @@ export default function Akalabeth() {
         </div>
         <div className="col-span-12 sm:col-span-6 lg:col-span-4">
           <img
-            src="/dungeon_view.png"
+            src="/akalabethmain.png"
             alt="Akalabeth dungeon screenshot"
             className="rounded"
           />
@@ -85,7 +91,7 @@ export default function Akalabeth() {
         </div>
         <div className="col-span-12 sm:col-span-6 lg:col-span-4">
           <img
-            src="/garriott_young.png"
+            src="/richard_garriott.png"
             alt="Young Richard Garriott"
             className="rounded"
           />

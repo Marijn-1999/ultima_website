@@ -1,8 +1,14 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
+  useEffect(() => {
+    document.body.classList.add("page-home");
+    return () => document.body.classList.remove("page-home");
+  }, []);
+
   return (
     <main>
       {/* Hero Section */}

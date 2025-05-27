@@ -70,23 +70,52 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('/background.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   color: var(--foreground);
 }
+body.page-home {
+  background-image: url('/background.png');
+}
 
 /* Akalabeth Page Background */
 body.akalabeth-page {
   background-image: url('/akalabeth_background.png');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
+.ultima1-page {
+  background-image: url('/ultima1_background.png');
+}
+
+.ultima2-page {
+  background-image: url('/ultima2_backgraound.png');
+}
+
+body.ultima3-page {
+  background-image: url('/ultima3_background.png');
+}
+
+body.ultima4-page {
+  background-image: url('/ultima4_background.png');
+}
+
+body.ultima5-page {
+  background-image: url('/ultima5_background.png');
+}
+
+body.ultima6-page {
+  background-image: url('/ultima6_background.png');
+}
+
+body.ultima7-page {
+  background-image: url('/ultima7_background.png');
+}
+
+body.ultima7-2-page {
+  background-image: url('/ultima7_background.png');
+}
 /* ========== Header Styles ========== */
 .header {
   background-color: rgba(30, 30, 30, 0.8);
@@ -150,7 +179,7 @@ body.akalabeth-page {
 }
 
 .dropbtn {
-  background-color: #4a2e8e;
+  background-color: transparent;
   color: white;
   padding: 10px 15px;
   font-size: 1rem;
@@ -159,6 +188,11 @@ body.akalabeth-page {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.dropbtn:hover {
+  background-color: #4a2e8e;
 }
 
 .dropdown-content {
