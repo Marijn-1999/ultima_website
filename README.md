@@ -16,7 +16,7 @@ A content-rich, visually styled website that presents a detailed overview of eve
 
 ## Installation
 
-**Requirements**:
+**Requirements:**
 
 - Node.js (v18 or newer)
 - npm or pnpm
@@ -26,6 +26,7 @@ A content-rich, visually styled website that presents a detailed overview of eve
 ```bash
 git clone https://github.com/your-username/ultima-archive.git
 cd ultima-archive
+
 2. Install dependencies
 bash
 Copy
@@ -33,16 +34,17 @@ Edit
 npm install
 # or
 pnpm install
+
 3. Start the development server
 bash
 Copy
 Edit
 npm run dev
-4. Open the site in your browser
-arduino
-Copy
-Edit
-http://localhost:3000
+
+4. Open the app
+Visit http://localhost:3000 in your browser.
+
+
 Usage
 You can browse the full archive via the homepage. Each game has its own route, for example:
 
@@ -54,24 +56,32 @@ You can browse the full archive via the homepage. Each game has its own route, f
 
 /ultima3
 
-...
+/ultima4
+
+/ultima5
+
+/ultima6
+
+/ultima7
+
+/ultima7part2
 
 /ultima8
 
-Each page includes:
+Each route presents:
 
-Game title and release information
+Game title and release year
 
 Plot summary and historical context
 
-Notable gameplay innovations
+Platform availability
 
-List of supported platforms
+Technical or gameplay innovations
 
-Screenshots and unique background styling
+Screenshots and themed background
 
 Code Example
-Example layout of a game detail page:
+Example layout of a game page component:
 
 tsx
 Copy
@@ -91,27 +101,39 @@ export default function Ultima3Page() {
     </main>
   );
 }
+
 Contributing
-To contribute:
+If you'd like to contribute:
 
 Fork the repository
 
-Create a new branch:
+Create a new branch
+
+bash
+Copy
+Edit
 git checkout -b feature/your-feature
+Make your changes and commit
 
-Make and commit your changes:
-git commit -m "Describe your change"
+bash
+Copy
+Edit
+git commit -m "Add feature"
+Push to your fork
 
-Push to your branch:
+bash
+Copy
+Edit
 git push origin feature/your-feature
+Open a Pull Request
 
-Open a pull request on GitHub
+Please follow consistent formatting and use descriptive commit messages.
 
-Please keep code style consistent and write clear commit messages.
+
 
 Troubleshooting / FAQ
-Q: Dropdown animations look broken or jumpy
-A: You can disable transitions for dropdown links:
+Dropdown animations look glitchy
+Disable transition for dropdown links in CSS:
 
 css
 Copy
@@ -119,56 +141,48 @@ Edit
 .dropdown-content a {
   transition: none;
 }
-Q: Background images aren't showing up
-A: Ensure that all images are placed in the /public folder and the file paths are correct.
+Background images not loading
+Ensure images like /public/ultima1_background.png are correctly placed and paths are correct.
 
-Q: Styles aren't applying per page
-A: Make sure the appropriate className is applied to the <body> tag, like this:
+Styles not applying on certain pages
+Confirm that the correct <body> class is set. Example:
 
 tsx
 Copy
 Edit
 <body className="ultima1-page">
 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 Changelog
 v1.0.0 – Initial release
 
-Next.js 14 App Router setup
+Project setup with Next.js App Router
 
-Tailwind CSS configuration
+Tailwind CSS integration with custom color variables
 
-Game routes from Akalabeth to Ultima VIII
+Routes for Akalabeth through Ultima VIII
 
-Responsive layout and hero banners
+Animated hero sections and themed pages
 
-Animated navigation and dropdowns
+Responsive dropdown navigation
 
 Educational Context
-This project was created for a school assignment and demonstrates:
+This project was developed as part of a school assignment and demonstrates:
 
-Iterative and prompt-based frontend development
+Prompt-based iterative coding with ChatGPT
 
-Use of component-driven architecture
+Component-driven architecture with Next.js
 
-CSS animation and responsive design principles
+Use of Tailwind for styling and layout
 
-Technical documentation using Markdown
+Documentation and semantic markup best practices
 
-Development notes and prompt history are documented in development-log.md.
+Full development history and prompt logs are available in development-log.md.
 
 yaml
 Copy
 Edit
 
 ---
-
-
-
-
-
-
-
-
 ```
