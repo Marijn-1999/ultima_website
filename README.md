@@ -7,45 +7,44 @@ A content-rich, visually styled website that presents a detailed overview of eve
 ## Features
 
 - Individual pages for every _Ultima_ title from **Akalabeth** through **Ultima VIII**
-- Historical summaries including **release year**, **story overview**, and **platforms**
+- Historical summaries including release year, story overview, and platforms
 - Custom backgrounds, animations, and responsive layouts per game
 - Accessible navigation menu with organized dropdown structure
 - Clean, semantic markup and component-based architecture
-- Light and dark mode support via `prefers-color-scheme`
 
 ---
 
 ## Installation
 
-> Requires: `Node.js` (v18 or newer) and `npm` or `pnpm`
+**Requirements**:
 
-1. **Clone the repository**
+- Node.js (v18 or newer)
+- npm or pnpm
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/ultima-archive.git
 cd ultima-archive
-Install dependencies
-
+2. Install dependencies
 bash
 Copy
 Edit
 npm install
 # or
 pnpm install
-Run development server
-
+3. Start the development server
 bash
 Copy
 Edit
 npm run dev
-Open in your browser
-
+4. Open the site in your browser
 arduino
 Copy
 Edit
 http://localhost:3000
-💡 Usage
-You can browse the full archive via the homepage. Each game has its own route:
+Usage
+You can browse the full archive via the homepage. Each game has its own route, for example:
 
 /akalabeth
 
@@ -59,20 +58,20 @@ You can browse the full archive via the homepage. Each game has its own route:
 
 /ultima8
 
-Each route presents:
+Each page includes:
 
-Game title and release info
+Game title and release information
 
 Plot summary and historical context
 
-Technical innovations
+Notable gameplay innovations
 
 List of supported platforms
 
-Screenshots and background image
+Screenshots and unique background styling
 
-✍️ Code Example
-Here’s a simplified example of a game page:
+Code Example
+Example layout of a game detail page:
 
 tsx
 Copy
@@ -93,23 +92,26 @@ export default function Ultima3Page() {
   );
 }
 Contributing
-Contributions are welcome! If you'd like to improve this project:
+To contribute:
 
 Fork the repository
 
-Create a new branch (git checkout -b feature/your-feature)
+Create a new branch:
+git checkout -b feature/your-feature
 
-Commit your changes (git commit -m 'Add feature')
+Make and commit your changes:
+git commit -m "Describe your change"
 
-Push to your branch (git push origin feature/your-feature)
+Push to your branch:
+git push origin feature/your-feature
 
-Submit a Pull Request
+Open a pull request on GitHub
 
-Please use clear commit messages and follow consistent code formatting.
+Please keep code style consistent and write clear commit messages.
 
 Troubleshooting / FAQ
-Dropdown animations look strange
-You can disable animation on the dropdown menu via CSS:
+Q: Dropdown animations look broken or jumpy
+A: You can disable transitions for dropdown links:
 
 css
 Copy
@@ -117,42 +119,56 @@ Edit
 .dropdown-content a {
   transition: none;
 }
-Background images not loading
-Make sure all image assets (e.g., /public/ultima1_background.png) are correctly placed in the /public folder.
+Q: Background images aren't showing up
+A: Ensure that all images are placed in the /public folder and the file paths are correct.
 
-Page styles not applying
-Ensure body class is applied in each page:
+Q: Styles aren't applying per page
+A: Make sure the appropriate className is applied to the <body> tag, like this:
 
 tsx
 Copy
 Edit
 <body className="ultima1-page">
 License
-This project is licensed under the MIT License. See LICENSE for details.
+This project is licensed under the MIT License.
 
-🗒️ Changelog
-[v1.0.0] – Initial release
-Set up project with Next.js App Router
+Changelog
+v1.0.0 – Initial release
 
-Added Tailwind CSS with custom themes
+Next.js 14 App Router setup
 
-Created routes for Akalabeth through Ultima VIII
+Tailwind CSS configuration
 
-Implemented animated hero sections and game-specific styling
+Game routes from Akalabeth to Ultima VIII
 
-Added dropdown navigation
+Responsive layout and hero banners
 
+Animated navigation and dropdowns
 
 Educational Context
-This project was developed as part of a school assignment to demonstrate:
+This project was created for a school assignment and demonstrates:
 
-Iterative development
+Iterative and prompt-based frontend development
 
-Prompt-based coding using AI
+Use of component-driven architecture
 
-Responsive frontend architecture
+CSS animation and responsive design principles
 
-Documentation and accessibility standards
+Technical documentation using Markdown
 
-Prompt history, process documentation, and more can be found in development-log.md.
+Development notes and prompt history are documented in development-log.md.
+
+yaml
+Copy
+Edit
+
+---
+
+
+
+
+
+
+
+
 ```
