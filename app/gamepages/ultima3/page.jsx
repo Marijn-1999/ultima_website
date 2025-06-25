@@ -41,7 +41,7 @@ export default function Page() {
         </div>
         <div className="col-span-12 sm:col-span-6 lg:col-span-4">
           <img
-            src="/ultima3_box.png"
+            src="/ultima3_cover.png"
             alt="Ultima III game box"
             className="rounded"
           />

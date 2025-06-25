@@ -89,7 +89,7 @@ export default function Page() {
         </div>
         <div className="col-span-12 sm:col-span-6 lg:col-span-4">
           <img
-            src="/minax_art.png"
+            src="/ultima2_minax.png"
             alt="Minax, the Enchantress"
             className="rounded"
           />
